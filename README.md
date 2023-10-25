@@ -5,14 +5,15 @@
 
 To complete the migration in a few minutes, follow these steps:
 1. Install ghost locally following this [link](https://ghost.org/docs/install/local/) 
-2. Make sure you have Python3 installed locally
-3. Sign up for a RapidAPI account and subscribe to the API [here](https://rapidapi.com/nishujain199719-vgIfuFHZxVZ/api/medium2). Opt for a paid plan for a month to finish the migration, otherwise, you might incur significant overusage fees.
-4. Run the locally-installed Ghost and create an API key [here](http://localhost:2369/ghost/#/settings/integrations/new)
-5. Store the necessary variables in the `.env` file, which the script will reference.
-6. Install the required dependencies using `pip install -r requirements.txt`
-7. Modify the `days=` on **line 47**. The value should be **1 less than the actual days**. (*Find the date of your first publication and ask ChatGPT to determine the total number of days between then and today!)*
-8. Execute the script with `python medium2ghost.py`
-9. Voilà! The migration is complete! You should now see your posts in your Ghost instance. Enjoy!
+2. Setup Ghost locally and browse through the admin settings
+3. Make sure you have Python3 installed locally
+4. Sign up for a RapidAPI account and subscribe to the API [here](https://rapidapi.com/nishujain199719-vgIfuFHZxVZ/api/medium2). Opt for a paid plan for a month to finish the migration, otherwise, you might incur significant overusage fees.
+5. Run the locally-installed Ghost and create an API key [here](http://localhost:2369/ghost/#/settings/integrations/new)
+6. Store the necessary variables in the `.env` file, which the script will reference.
+7. Install the required dependencies using `pip install -r requirements.txt`
+8. Modify the `days=` on **line 47**. The value should be **1 less than the actual days**. (*Find the date of your first publication and ask ChatGPT to determine the total number of days between then and today!)*
+9. Execute the script with `python medium2ghost.py`
+10. Voilà! The migration is complete! You should now see your posts in your Ghost instance. Enjoy!
 
 ### Note
 - Medium does not, by default, export content in markdown format, also Ghost primarily accepts imports in JSON and mobiledoc formats only. In this script, articles from Medium are exported in markdown format, then transformed and uploaded to Ghost in its default mobiledoc format.
