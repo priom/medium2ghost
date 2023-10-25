@@ -1,0 +1,5 @@
+requests
+jwt
+dotenv
+datetime
+medium_api

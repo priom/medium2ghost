@@ -1,9 +1,9 @@
 # Import libraries
 import os
+import requests, json, jwt, re
 from dotenv import load_dotenv
 from datetime import datetime, timedelta
 from medium_api import Medium
-import requests, json, jwt, re
 
 # Load the environment variables from the .env file
 load_dotenv()
@@ -44,7 +44,7 @@ publication = medium.publication(publication_id=publication_slug._id, save_info=
 # Fetch all publication articles
 all_articles = publication.get_articles_between(
                                 _from=datetime.now(), 
-                                _to=datetime.now() - timedelta(days=1) # days should be 1 less than the actual days
+                                _to=datetime.now() - timedelta(days=10) # days should be 1 less than the actual days
                             )
 for article in all_articles:
     user = medium.user(user_id=article.author.user_id)
@@ -73,7 +73,7 @@ for article in all_articles:
     response = requests.post(ghost_api_url, headers=headers, json=data)
 
     if response.status_code == 201:
-        print(article.Title + " created successfully!")
+        print(article.title + " created successfully!")
     else:
         print(f"Failed to create post. Status code: {response.status_code}")
         print(response.text)
