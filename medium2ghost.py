@@ -42,8 +42,10 @@ publication_slug = medium.publication(publication_slug=os.getenv('MEDIUM_PUB_SLU
 publication = medium.publication(publication_id=publication_slug._id, save_info=False)
 
 # Fetch all publication articles
-all_articles = publication.get_articles_between( _from=datetime(2023, 10, 31),_to=datetime(2023, 10, 21))
-
+all_articles = publication.get_articles_between(
+                                _from=datetime.now(), 
+                                _to=datetime.now() - timedelta(days=10) # days should be 1 less than the actual days
+                            )
 for article in all_articles:
     user = medium.user(user_id=article.author.user_id)
 
@@ -73,5 +75,5 @@ for article in all_articles:
     if response.status_code == 201:
         print(article.title + " created successfully!")
     else:
-        print(f"Failed to create post. Status code: {response.status_code}")
+        print(article.title + f"Failed to create post. Status code: {response.status_code}")
         print(response.text)
