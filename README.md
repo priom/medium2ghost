@@ -1,4 +1,5 @@
 # Script to migrate Medium to Ghost
+>*🧪 Experimental Code Alert: The code in this repository is experimental and not production-ready. Please be aware that it might contain bugs or issues.*
 
 > This script facilitates the migration of your entire Medium publication to Ghost, as Medium does not offer a straightforward way to export all your content.  
 > You should really consider migrating and consider Ghost, it's awesome, open-source and free.
@@ -22,5 +23,3 @@ While testing the api, reduce the value of X `timedelta(days=X)` in **line 47** 
 - This script works in production too, just change the ENV variables. Digitalocean has 1-click Ghost app which simplifies the installation and management
 - Sometimes if there's a lot articles it can get rate limited default in ghost production so, try doing the migration locally, then export from local and import in production, All the articles, design and format is going to be same
 
-
-&copy; Copyright Protected & All Rights Reserved by [Priom Chowdhury](https://0xpriom.com/)
