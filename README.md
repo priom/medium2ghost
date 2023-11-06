@@ -15,6 +15,7 @@ To complete the migration in a few minutes, follow these steps:
 8. Modify the `timedelta(days=X)` on **line 47**. The value of X should be **1 less than the actual days**.
 9. Execute the script with `python medium2ghost.py`
 10. Voilà! The migration is complete! You should now see your posts in your Ghost instance. Enjoy!
+11. Setup redirects if you had custom domain on medium. [Here](https://ghost.org/docs/migration/medium/) is the official documentation on how to do it
 
 ### Note
 - Medium does not, by default, export content in markdown format, also Ghost primarily accepts imports in JSON and mobiledoc formats only. In this script, articles from Medium are exported in markdown format, then transformed and uploaded to Ghost in its default mobiledoc format.
