@@ -1,8 +1,9 @@
 # Script to migrate Medium to Ghost
 >*🧪 Experimental Code Alert: The code in this repository is experimental and not production-ready. Please be aware that it might contain bugs or issues.*
 
-> This script facilitates the migration of your entire Medium publication to Ghost, as Medium does not offer a straightforward way to export all your content.  
-> You should really consider migrating and consider Ghost, it's awesome, open-source and free.
+**This script facilitates the migration of your entire Medium publication to Ghost, as Medium does not offer a straightforward way to export all your content.**  
+
+You should really consider migrating and consider Ghost, it's awesome, open-source and free.
 
 To complete the migration in a few minutes, follow these steps:
 1. Install ghost locally following this [link](https://ghost.org/docs/install/local/) 
